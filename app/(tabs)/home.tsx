@@ -2,7 +2,7 @@ import { Image, StyleSheet, Platform, View, Text } from 'react-native';
 import HeaderApp from '../_components/headerApp';
 
 
-export default function Explore() {
+export default function HomeScreen() {
 
   return (
    <View style={styles.homeSection}>

@@ -23,6 +23,9 @@ export default function Login() {
     router.push("/register");
   };
 
+  const homeRedirect = () => {
+    router.push("/(tabs)/home");
+  };
   const toggleCheckbox = () => {
     setRememberMe(!rememberMe);
   };
@@ -73,7 +76,7 @@ export default function Login() {
               <Text style={styles.forgotPassword}>Esqueceu a senha?</Text>
             </Pressable>
           </View>
-          <SubmitButton />
+          <SubmitButton onPress={homeRedirect} />
         </View>
         <View style={styles.FormFooter}>
           <Text style={{ color: "#fff", fontSize: 14 }}>
