@@ -1,16 +1,21 @@
 import React from 'react';
 import { StyleSheet, View, Image, TouchableOpacity, Pressable } from 'react-native';
 import DevFlowLogo from '../../assets/images/DevFlowLogo.png';
-import { Ionicons } from '@expo/vector-icons'; // Biblioteca de ícones
+import { Ionicons } from '@expo/vector-icons';
 
 const HeaderApp = () => {
   return (
     <View style={styles.headerContainer}>
       <Image source={DevFlowLogo} style={styles.logo} resizeMode="contain" />
-      <TouchableOpacity style={styles.iconContainer}>
-        <Pressable>
-        </Pressable>
-      </TouchableOpacity>
+      
+      <View style={styles.iconContainer}>
+        <TouchableOpacity style={styles.iconButton}>
+          <Ionicons name="chatbubble-outline" size={24} color="#fff" />
+        </TouchableOpacity>
+        
+        <TouchableOpacity style={styles.profilePic}>
+        </TouchableOpacity>
+      </View>
     </View>
   );
 };
@@ -30,12 +35,23 @@ const styles = StyleSheet.create({
     height: '70%',
   },
   iconContainer: {
-    padding: 17,
-    backgroundColor: '#FFF',
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 20
+  },
+  iconButton: {
+    marginLeft: 20,
+    padding: 10,
     borderRadius: 50,
     justifyContent: 'center',
     alignItems: 'center',
+    fontWeight: 800
   },
+  profilePic: {
+    padding: 20,
+    backgroundColor: '#FFF',
+    borderRadius: 50
+  }
 });
 
 export default HeaderApp;
