@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, View, Image, TouchableOpacity, Pressable } from 'react-native';
 import DevFlowLogo from '../../assets/images/DevFlowLogo.png';
-import { Ionicons } from '@expo/vector-icons'; // Biblioteca de ícones
+import { Ionicons } from '@expo/vector-icons';
 
 const HeaderApp = () => {
   return (
